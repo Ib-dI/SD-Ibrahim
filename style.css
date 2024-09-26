@@ -14,6 +14,9 @@
     --color: hsl(0 0% 6%);
     --bg: hsl(0 0% 98%);
     --monde: hsl(32 98% 50%);
+    --blue: hsl(216, 91%, 50%);
+    --rose: rgb(130, 3, 49);
+    --gold: rgb(240, 176, 2);
     --content-size: 520px;
     --eclipse: 60%;
     --brightness: 150%;
@@ -46,8 +49,9 @@ body {
     font-size: 1.6rem;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
+    flex-direction: column;
     background-position: fixed;
 }
 .dark {
@@ -56,9 +60,13 @@ body {
     --bg: hsl(0 0% 6%);
     --monde: hsl(23, 98%, 50%);
     --brightness: 0;
+    --blue: hsl(223, 71%, 22%);
+    --rose: rgb(64, 3, 27);
+    --gold: rgba(240, 176, 2, 0.842);
+
 }
 header {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
 }
 ul {
@@ -104,6 +112,12 @@ a:hover .text-link {
 }
 a:hover #email {
     transform: translateY(-26px) translateX(-10px);
+}
+a:hover #work {
+    transform: translateY(-26px) translateX(-5px);
+}
+a:hover #home {
+    transform: translateY(-26px) translateX(-3px);
 }
 a:hover .box{
     transform: scale(1.1) translateY(-5px);
@@ -226,9 +240,39 @@ a:hover .box{
     text-align: left;
     color: var(--color);
 }
+.container {
+    margin-top: 150px;
+}
 .main-title h1 span {
     color: var(--monde);
 }
 .intro {
     width: 625px;
+}
+.project {
+    margin-top: 50px;
+    text-align: center;
+}
+#work-list h2 {
+    font-size: 3rem;
+    margin-bottom: 60px;    
+}
+.card-pro {
+    /* position: relative; */
+    width: 950px;
+    height: 385px;
+    border-radius: 75px;
+    margin-bottom: 40px;
+}
+.blue-card {
+    background-color: var(--blue);
+}
+.pink-card {
+    background-color: var(--rose);
+}
+.gold-card {
+    background-color: var(--gold);
+}
+.blue-card {
+    background-color: var(--blue);
 }
