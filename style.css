@@ -123,7 +123,7 @@ a:hover .box{
     transform: scale(1.1) translateY(-5px);
 }
 .box {
-    z-index: 1;
+    z-index: 10;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -253,26 +253,66 @@ a:hover .box{
     margin-top: 50px;
     text-align: center;
 }
-#work-list h2 {
+#work-list {
     font-size: 3rem;
-    margin-bottom: 60px;    
+    margin-bottom: 60px;
+    font-weight: 800;
+    
 }
 .card-pro {
     /* position: relative; */
+    z-index: -10;
     width: 950px;
     height: 385px;
     border-radius: 75px;
     margin-bottom: 40px;
+    display: flex;
+    gap: 25px;
+    padding: 30px;
+    background-color: var(--bg);
+    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.10));
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.blue-card {
-    background-color: var(--blue);
+.card-pro:hover {
+    transition: all 0.3s ease-out;
+    box-shadow: 0 4px 15px rgba(38, 38, 38, 0.32);
+    top: -3px;
+    border: 1px solid #cccccc;
 }
-.pink-card {
-    background-color: var(--rose);
+.img-pro img {
+    width: 380px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1px solid var(--bg);
 }
-.gold-card {
-    background-color: var(--gold);
+.info-pro {
+    text-align: left;
 }
-.blue-card {
-    background-color: var(--blue);
+.info-pro h3 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.info-pro h3 span {
+    color: rgb(74, 108, 232);
+}
+#techno {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.tech-li {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.pastille {
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: var(--bg);
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0);
+    border: 1px solid var(--gold);
 }
