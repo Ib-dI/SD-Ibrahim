@@ -14,12 +14,23 @@
     --color: hsl(0 0% 6%);
     --bg: hsl(0 0% 98%);
     --monde: hsl(32 98% 50%);
-    --blue: hsl(216, 91%, 50%);
-    --rose: rgb(130, 3, 49);
     --gold: rgb(240, 176, 2);
+    --shadow-one: rgba(0, 0, 0, 0.10);
+    --shadow-two: rgba(0, 0, 0, 0);
     --content-size: 520px;
     --eclipse: 60%;
     --brightness: 150%;
+}
+.dark {
+	color-scheme: dark only;
+    --color: hsl(0 0% 98%);
+    --bg: hsl(0 0% 6%);
+    --monde: hsl(23, 98%, 50%);
+    --brightness: 0;
+    --gold: rgba(240, 176, 2, 0.842);
+    --shadow-one: rgba(255, 255, 255, 0.15);
+    --shadow-two: rgba(255, 255, 255, 0.1);
+
 }
 html {
     font-size: 62.5%;
@@ -48,26 +59,18 @@ body {
     font-family: "Inter",sans-serif;
     font-size: 1.6rem;
     min-height: 100vh;
+    width: 100vw;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     background-position: fixed;
 }
-.dark {
-	color-scheme: dark only;
-    --color: hsl(0 0% 98%);
-    --bg: hsl(0 0% 6%);
-    --monde: hsl(23, 98%, 50%);
-    --brightness: 0;
-    --blue: hsl(223, 71%, 22%);
-    --rose: rgb(64, 3, 27);
-    --gold: rgba(240, 176, 2, 0.842);
-
-}
 header {
     position: fixed;
     bottom: 30px;
+    position: fixed;
+    bottom: 30px;
+    z-index: 1000;
 }
 ul {
     position: relative;
@@ -263,15 +266,15 @@ a:hover .box{
     /* position: relative; */
     z-index: -10;
     width: 950px;
-    height: 385px;
+    height: 405px;
     border-radius: 75px;
     margin-bottom: 40px;
     display: flex;
     gap: 25px;
     padding: 30px;
     background-color: var(--bg);
-    filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.10));
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    filter: drop-shadow(0px 1px 1px var(--shadow-one));
+    box-shadow: 0 0 1px var(--shadow-two);
 }
 .card-pro:hover {
     transition: all 0.3s ease-out;
@@ -281,7 +284,7 @@ a:hover .box{
 }
 .img-pro img {
     width: 380px;
-    height: 320px;
+    height: 350px;
     object-fit: cover;
     border-radius: 30px;
     border: 1px solid var(--bg);
@@ -305,6 +308,7 @@ a:hover .box{
     display: flex;
     gap: 5px;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 .pastille {
     display: flex;
@@ -315,4 +319,15 @@ a:hover .box{
     background-color: var(--bg);
     box-shadow: 1px 2px 1px rgba(0, 0, 0, 0);
     border: 1px solid var(--gold);
+}
+.link {
+    margin-left: 225px;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    box-shadow: 0 1px 32px 0 rgba(31, 52, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
