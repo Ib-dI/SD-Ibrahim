@@ -257,13 +257,11 @@ a:hover .box{
     text-align: center;
 }
 #work-list {
-    font-size: 3rem;
+    font-size: 3.8rem;
     margin-bottom: 60px;
     font-weight: 800;
-    
 }
 .card-pro {
-    /* position: relative; */
     z-index: -10;
     width: 950px;
     height: 405px;
@@ -327,7 +325,26 @@ a:hover .box{
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 50px;
-    box-shadow: 0 1px 32px 0 rgba(31, 52, 135, 0.37);
+    box-shadow: .1px .1px 3px 0px rgba(31, 52, 135, 0.37);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.25); /* Changement de couleur au survol */
+    box-shadow: 0 1px 10px 0 rgba(31, 52, 135, 0.47); /* Accentuation de l'ombre */
+    transform: scale(1.05); /* Lien légèrement agrandi au survol */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Accentuation de la bordure */
+}
+.link img {
+    transition: transform 0.3s ease-in-out;
+    color: var(--color);
+    width: 24px;
+}
+.link:hover img {
+    transform: rotate(20deg); /* Faire tourner l'icône au survol */
 }
