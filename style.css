@@ -17,6 +17,7 @@
     --gold: rgb(240, 176, 2);
     --shadow-one: rgba(0, 0, 0, 0.10);
     --shadow-two: rgba(0, 0, 0, 0);
+    --sky: #4ba1fd;
     --content-size: 520px;
     --eclipse: 60%;
     --brightness: 150%;
@@ -28,6 +29,7 @@
     --monde: hsl(23, 98%, 50%);
     --brightness: 0;
     --gold: rgba(240, 176, 2, 0.842);
+    --sky: #2379d6;
     --shadow-one: rgba(255, 255, 255, 0.15);
     --shadow-two: rgba(255, 255, 255, 0.1);
 
@@ -354,3 +356,88 @@ a:hover .box{
 .link:hover img {
     transform: rotate(20deg); /* Faire tourner l'icône au survol */
 }
+/* Contact */
+#contact {
+    margin-top: 100px;
+    text-align: center;
+    color: var(--color);
+}
+.banniere-titre .titre {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--monde);
+}
+form {
+    margin-top: 40px;
+    margin-bottom: 150px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 52, 135, 0.37);
+}
+.form-item {
+    margin-bottom: 25px;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color);
+}
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.6rem;
+    color: var(--color);
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(31, 52, 135, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+input::placeholder, 
+textarea::placeholder {
+    color: rgba(38, 38, 38, 0.6); /
+}
+.dark input::placeholder, 
+.dark textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+input:focus, textarea:focus {
+    border-color: var(--sky);
+    outline: none;
+    box-shadow: 0 4px 15px rgba(38, 38, 38, 0.3);
+}
+.error {
+    font-size: 1.2rem;
+    color: red;
+    margin-top: 5px;
+}
+button {
+    background-color: var(--monde);
+    color: var(--bg);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-family: inherit;
+    font-size: 1.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: rgba(240, 176, 2, 0.85);
+    box-shadow: 0 4px 15px rgba(38, 38, 38, 0.3);
+}
+.invisible{
+    display: none;
+}
+

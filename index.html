@@ -38,7 +38,7 @@
                 </li>
                 <li>
                     <a href="#contact">
-                        <span class="text-link" id="email">Contact</span>
+                        <span class="text-link" >Contact</span>
                         <div class="box">
                             <img src="./assets/icons/SolarDialogBoldDuotone.svg" alt="Dialog icon" srcset="">
                         </div>
@@ -215,6 +215,7 @@
             <div class="form-item">
                 <label for="email">Email</label>
                 <input type="text" id="email" placeholder="Votre e-mail">
+                <div class="error invisible">Veuillez entrer une adresse email valide (exemple : nom@domaine.com).</div>
             </div>
 
             <div class="form-item">
@@ -231,5 +232,16 @@
     </section>
     
     <script type="module" src="./script.js"></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "JuQFWh6j2UzZ8YYMw",
+  });
+})();
+</script>
+
 </body>
 </html>
