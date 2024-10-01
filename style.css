@@ -115,7 +115,7 @@ a:hover .text-link {
 	transform: translateY(-26px) scale(1);
 	opacity: 1;
 }
-a:hover #email {
+a:hover #co {
 	transform: translateY(-26px) translateX(-10px);
 }
 a:hover #work {
@@ -141,7 +141,6 @@ a:hover .box {
 .box img {
 	width: 70%;
 	height: auto;
-	/* object-fit: cover; */
 	transition: transform 0.3s ease;
 }
 .box:hover img {
@@ -344,23 +343,22 @@ a:hover .box {
 	gap: 5px;
 }
 .link:hover {
-	background-color: rgba(
-		255,
-		255,
-		255,
-		0.25
-	); /* Changement de couleur au survol */
-	box-shadow: 0 1px 10px 0 rgba(31, 52, 135, 0.47); /* Accentuation de l'ombre */
-	transform: scale(1.05); /* Lien légèrement agrandi au survol */
-	border: 1px solid rgba(255, 255, 255, 0.25); /* Accentuation de la bordure */
+	background-color: rgba(255,255,255,0.25); 
+	box-shadow: 0 1px 10px 0 rgba(31, 52, 135, 0.47); 
+	transform: scale(1.05);
+	border: 1px solid rgba(255, 255, 255, 0.25);
 }
 .link img {
 	transition: transform 0.3s ease-in-out;
 	color: var(--color);
 	width: 24px;
+    filter: invert(0);
+}
+.dark .link img {
+    filter: invert(1);
 }
 .link:hover img {
-	transform: rotate(20deg); /* Faire tourner l'icône au survol */
+	transform: rotate(20deg);
 }
 /* Contact */
 #contact {
@@ -459,7 +457,7 @@ button:hover {
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.18);
 	border-radius: 50px;
-	box-shadow: 0 8px 32px 0 rgba(31, 52, 135, 0.37);
+	box-shadow: 0.1px 0.1px 3px 0px rgba(31, 52, 135, 0.37);
 	text-decoration: none;
 	color: var(--color);
 	font-weight: bold;
@@ -470,13 +468,17 @@ button:hover {
 }
 .cv-link:hover {
 	background-color: rgba(255, 255, 255, 0.25);
-	box-shadow: 0 1px 10px 0 rgba(31, 52, 135, 0.47);
+	box-shadow: 0 1px 5px rgba(31, 52, 135, 0.47);
 	transform: scale(1.05);
     width: 280px;
 }
 .cv-link img {
 	width: 24px;
+    filter: invert(1);
 	transition: transform 0.3s ease-in-out;
+}
+.dark .cv-link img {
+    filter: invert(0); 
 }
 .cv-link:hover img {
 	transform: rotate(20deg);
