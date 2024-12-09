@@ -253,6 +253,7 @@ a:hover .box {
 }
 .intro {
 	width: 625px;
+	font-size: 2rem;
 }
 .project {
 	margin-top: 50px;
@@ -524,6 +525,22 @@ button:hover {
 	}
 	.tech-li {
 		margin-bottom: 25px;
+	}
+}
+@media screen and (max-width: 425px) {
+	body {
+		padding: 10px;
+	}
+	.main-title h1 {
+		font-size: 4rem;
+	}
+	.card-pro {
+		width: 95%;
+		padding-bottom: 50px;
+	}
+	.img-pro img {
+		width: 98%;
+		height: 300px;
 	}
 }
 @media screen and (max-width: 425px) {
